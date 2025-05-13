@@ -11,19 +11,20 @@
 <%-- 	<form action="<%= request.getContextPath() %>/upload" method="post" enctype="multipart/form-data"> --%>
 	<!-- JSP로 요청 -->
 	<form action="<%= request.getContextPath() %>/fileupload01_pro.jsp" method="post" enctype="multipart/form-data">
-		<div>
-			이 름 : <input type="text" name="name" />
-		</div>
-		<div>
-			제 목 : <input type="text" name="title" />
-		</div>
-		<div>
-			파 일 : <input type="file" name="file1" /> <br>
-			파 일 : <input type="file" name="file2" /> <br>
-		</div>
-		<div>
-			<input type="submit" value="업로드" />
-		</div>
+	  <div>
+	  	이 름 : <input type="text" name="name" />
+	  </div>
+	  <div>
+	  	제 목 : <input type="text" name="title" />
+	  </div>
+	  <div>
+	  	파 일 : <input type="file" name="file1" /> <br>
+	  	파 일 : <input type="file" name="file2" /> <br>
+	  </div>
+	  <div>
+	  	<input type="submit" value="업로드" />
+	  </div>		
 	</form>
+		 	
 </body>
 </html>
