@@ -36,18 +36,19 @@ public class LoginManager {
 	
 	// 사용자 제거
 	public void removeUser(String sessionId) {
-		List<String> sessionIdList = (List<String>) loginUsers.values();
-		for (int i = 0; i < sessionIdList.size(); i++) {
-			String id = sessionIdList.get(i);
-			if (sessionId.equals(id)) {
-				sessionIdList.remove(i);
+		List<String> userIdList = (List<String>) loginUsers.values();
+		for (int i = 0; i < userIdList.size(); i++) {
+			String id = userIdList.get(i);
+			String sid = loginUsers.get(id);
+			if (sessionId.equals(sid)) {
+				loginUsers.remove(id);
 			}
 		}
 	}
 	
 	// SESSIONID로 userId 확인
 	public String getUserId(String sessionId) {
-		List<String> userIdList = (List<String>) loginUsers.keySet();
+		List<String> userIdList = new ArrayList<String>(loginUsers.keySet());
 		for (String key : userIdList) {
 			if (loginUsers.get(key).equals(sessionId)) {
 				return key;
