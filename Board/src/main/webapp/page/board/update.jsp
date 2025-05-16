@@ -15,8 +15,8 @@
 
 	<main>
 		<div class="container mt-5">
-			<h2 class="mb-4">게시글 조회</h2>
-			<form action="">
+			<h2 class="mb-4">게시글 수정</h2>
+			<form action="<%= root %>/board/update" method="post">
 				<input type="hidden" name="id" value="${board.id}" />
 	
 				<div class="mb-3">
@@ -35,7 +35,7 @@
 				</div>
 	
 				<div class="d-grid gap-2 mt-4">
-					<a href="<%= root %>/board/update?id=${ board.id }" class="btn btn-primary">수정</a>
+					<button type="submit" class="btn btn-primary">수정</button>
 					<a href="<%= root %>/board/list" class="btn btn-secondary">목록</a>
 				</div>
 			</form>
